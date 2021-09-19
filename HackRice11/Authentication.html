@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Retail Solutions and Advices </title>
+    <link href="./Authentication.css" rel="stylesheet">
+    <link rel="icon" href="./icon.png">
+    <script>
+        function checkEvt() {
+            var evTypep = window.performance.getEntriesByType("navigation")[0].type;
+            if (evTypep == 'reload') {
+                window.location.replace("templates/index.html");
+            }
+
+        }
+        checkEvt();
+    </script>
+</head>
+
+<body>
+    <br><br>
+    <center>
+        <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
+            <br>
+            <center>
+                <h2>
+                    <u>Login/Signup</u>
+                </h2>
+            </center>
+            <br>
+            <center><small><span id="error" style="color: red"></span></small></center>
+            <center><label class="custom-field">
+                    <input id="email" type="text" placeholder="Email ID" required>
+                    <span>&emsp; Email Id &ensp; <mark.aqua style="color: red;">*</mark.aqua></span>
+                </label>
+                <br><br>
+                <label class="custom-field">
+                    <input id="password" type="password" placeholder="Password" required>
+                    <span class="placeholder">&emsp; Password &ensp;<mark.aqua style="color: red;">*</mark.aqua></span>
+                </label></center><br><br>
+            <center><button class="firebase" type="submit">Login</button> &emsp;
+                <button class="firebase" onclick="signUp()">Sign Up</button>
+            </center>
+            <br>
+            <br>
+        </form>
+    </center>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+    <script src="Authentication.js"></script>
+</body>
+
+</html>

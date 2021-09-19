@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./icon.png">
+    <link rel="stylesheet" href="welcome-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+    <script src="welcome.js"></script>
+    <title>Welcome</title>
+    <script>
+        function checkEvt() {
+            var evTypep = window.performance.getEntriesByType("navigation")[0].type;
+            if (evTypep == 'reload') {
+                window.location.replace("templates/index.html");
+            }
+        }
+        checkEvt();
+    </script>
+</head>
+
+<body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <span id="user" class="message">Hello, <email-id></Email-id></span>
+        <email-id></email-id>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#section-c" class="active">About Us</a>
+        <a href="#main">Why?</a>
+        <a href="#contact">Contact</a>
+        <a onclick="logout()">Logout</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <!-- Header Showcase -->
+    <header id="showcase" class="grid">
+        <div class="bg-image"></div>
+        <div class="content-wrap">
+            <h1>Welcome to our Retail Solutions and Advices</h1>
+            <br><br><br>
+            <a href="templates/predictor.html" class="btn">Go to Predictor ➡️</a>
+        </div>
+    </header>
+
+    <!-- Main Area -->
+    <main id="main">
+        <!-- Section A -->
+        <section id="section-a" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Brilliant stocks products for your businesses</h2>
+                <div class="content-text">
+                    <p>Since COVID affected a lot of small businesses, now it's the right time to rebuild our business.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B -->
+        <section id="section-b" class="grid">
+            <ul>
+                <li>
+                    <div class="card">
+                        <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbq0cVMjnub7_x1Ok6iYHi3PGK_Z6n4TlwmQ&usqp=CAU" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">BUY at Nice Retail</h3>
+                            <p>Buying the right retail stocks at a right price in the right time can give us a huge market leap for our business.<br><br> For that, We are here to help you !</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img class="images" src="https://static.pexels.com/photos/261628/pexels-photo-261628.jpeg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Machine Learning</h3>
+                            <p>We have used advanced sophisticated algorithms, well-trained models and the most researched datasets.<br><br> This concept of machine learning will help us accurately predict what kind of retail stocks our small business owners
+                                should buy, so that they get the highest profits.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card" id="third">
+                        <img class="images" src="https://media.gettyimages.com/photos/stock-exchange-graph-and-numbers-picture-id926129268" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Post COVID strategies that retailers should know</h3>
+                            <p> <b>Customer</b> - How has your customer evolved during and after the crisis?<br>
+                                <b>Brand</b> - Do you need to evolve your value proposition to stay relevant? If so, how?<br>
+                                <b>Product</b> - What are the key, best-selling products and high-interest categories your customers care about today? <br>
+                                <b>Store</b> - How do you keep your customers and associates safe, while playing a new role in customers’ lives?</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section C -->
+        <section id="section-c" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">About US</h2>
+                <p>We are a trio group of young engineer aspirants who have an urge to build something innovative and useful for the society.</p>
+            </div>
+        </section>
+
+        <!-- Section D -->
+        <section id="section-d" class="grid">
+            <div class="box" id="contact">
+                <h2 class="content-title">Contact Us</h2>
+                <p>You can reach out to us via Email and to know more about check our Github repos.</p>
+                <a href="https://github.com/Reaper-Dhan" target="__blank"><button style="background-color: rgba(47, 139, 231, 0.904); border: 0px"><i style="font-size:24px" class="fa">&#xf09b;</i></button></a>
+                </button>
+                </a> &emsp;
+                <a href="https://github.com/Dattasai-Ammanamanchi" target="__blank"><button style="background-color: rgba(47, 139, 231, 0.904); border: 0px"><i style="font-size:24px" class="fa">&#xf09b;</i></button></a>
+                </button>
+                </a> &emsp;
+                <a href="https://github.com/rishabh1402" target="__blank"><button style="background-color: rgba(47, 139, 231, 0.904); border: 0px"><i style="font-size:24px" class="fa">&#xf09b;</i></button></a>
+                </button>
+                </a>
+                <br>
+            </div>
+            <div class="box">
+                <h2 class="content-title">About Our Project</h2>
+                <p>This project was made to help small businesses to grasp the hot-selling retail stocks.</p>
+            </div>
+        </section>
+
+        <section class="power" id="stack" style="padding: 20px;text-align: center;">
+            <div class="container text-center" style="padding: 5px;margin: 0px;width: 100%;max-width: 100%;text-align: left;">
+                <h1 style="padding: 10px;width: auto;text-align: left;margin-left: 3%;margin-top: 2%;font-weight: bold;">Powered by</h1>
+            </div>
+            <center>
+                <div class="container" style="margin: 2%;text-align: center;width: 80%;">
+                    <div class="row">
+                        <div class="column">
+                            <img src="htmlcssjs.png" style="width: 300px; height: 250px">
+                        </div>
+                        <div class="column">
+                            <img src="firebase.png" style="width: 300px; height: 250px">
+                        </div>
+                        <div class="column">
+                            <img src="anaconda.jpg" style="width: 300px; height: 250px">
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="grid">
+        <div>
+            <p class="copyright">Retail Solutions and Advices © 2021</p>
+        </div>
+        <div>
+            <p>Project By
+                <mark.black style="color: Blue;">Ricemen</mark.black>
+                <br> ricemen57@gmail.com
+            </p>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">🔺</button>
+
+</body>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</html>
